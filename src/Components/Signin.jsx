@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import "./SignIn.css"
+import "./Signin.css"
 
 const SignIn = () => {
   const [email, setEmail] = useState("")
