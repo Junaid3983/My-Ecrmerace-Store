@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { getProductsByCategory } from "../services/ProductService"
-import "./Newproduct.css"
+import "./Newproducts.css"
 
 const NewProducts = ({ addToCart, addToHeart }) => {
   const [startIndex, setStartIndex] = useState(0)
