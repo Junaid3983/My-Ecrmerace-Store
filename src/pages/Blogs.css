@@ -1,0 +1,137 @@
+.blogs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .blogs-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .title-underline {
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #f97316;
+  }
+  
+  .blogs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .blog-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  
+  .blog-image-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.375rem;
+  }
+  
+  .blog-date-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #4b5563;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .blog-content {
+    width: 100%;
+    padding-top: 1rem;
+  }
+  
+  .blog-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-author {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+  }
+  
+  .blog-description {
+    color: #444;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    /* -webkit-line-clamp: 3; */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .read-more-link {
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  
+  .read-more-link:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 0.75rem;
+    color: #666;
+  }
+  
+  .social-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: inherit;
+  }
+  
+  .social-icon:hover {
+    color: #333;
+  }
+  
+  /* Media query for tablet and desktop */
+  @media (min-width: 768px) {
+    .blogs-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .blog-item {
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+  
+    .blog-image-container {
+      width: 40%;
+    }
+  
+    .blog-content {
+      width: 60%;
+      padding-top: 0;
+    }
+  }
+  

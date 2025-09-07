@@ -1,0 +1,59 @@
+.promo-cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: nowrap; /* Prevent wrapping to ensure cards stay in a row */
+}
+
+.promo-card-link {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  max-width: 580px;
+  flex: 1; /* Make cards take equal space */
+}
+
+.promo-card {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.promo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.promo-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Remove the media query that was causing stacking on mobile */
+/* Instead, add responsive adjustments that maintain the row layout */
+@media (max-width: 768px) {
+  .promo-cards-container {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .promo-card {
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-cards-container {
+    padding: 5px;
+    gap: 5px;
+  }
+}

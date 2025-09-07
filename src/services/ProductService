@@ -1,0 +1,26 @@
+// Centralized product data
+const products = [
+    { id: 1, title: "Quis autem veleuminium", price: "₹115.00", image: "https://cdn11.bigcommerce.com/s-xfjb6c0wb4/images/stencil/320w/products/97/406/07__37672.1589167510.jpg?c=1", category: "BestSeller" },
+    { id: 2, title: "Perspiciatis unde omnis", price: "₹234.95", image: "https://cdn11.bigcommerce.com/s-xfjb6c0wb4/images/stencil/320w/products/94/416/08__80802.1589167555.jpg?c=1", category: "Featured" },
+    { id: 3, title: "Magni dolores eosquies", price: "₹129.95", image: "https://cdn11.bigcommerce.com/s-xfjb6c0wb4/images/stencil/320w/products/93/418/10__77709.1589167608.jpg?c=1", category: "New" },
+    { id: 4, title: "Tempora quiidunt utlabore", price: "₹159.99", image: "https://cdn11.bigcommerce.com/s-xfjb6c0wb4/images/stencil/320w/products/88/450/18__48766.1589167872.jpg?c=1", category: "BestSeller" },
+    { id: 5,
+       title: "Neque porro quisquam", price: "₹79.95", image: "https://cdn11.bigcommerce.com/s-xfjb6c0wb4/images/stencil/320w/products/86/426/11__43953.1589167644.jpg?c=1", category: "Featured" },
+    { id: 6, title: "Aliquam quat voluptatem", price: "₹95.00", image: "https://cdn11.bigcommerce.com/s-xfjb6c0wb4/images/stencil/320w/products/98/403/06__53465.1589167485.jpg?c=1", category: "New" },
+    { id: 7, title: "Aspetur autodit autfugit", price: "₹189.00", image: "https://cdn11.bigcommerce.com/s-xfjb6c0wb4/images/stencil/320w/products/107/376/03__90583.1589167096.jpg?c=1", category: "BestSeller" },
+    { id: 8, title: "Neque porro ", price: "₹199.99", image: "https://cdn11.bigcommerce.com/s-xfjb6c0wb4/images/stencil/320w/products/86/426/11__43953.1589167644.jpg?c=1", category: "Featured" },
+    { id: 9, title: "Aspetur autodit autfugit", price: "₹134.00", image: "https://cdn11.bigcommerce.com/s-xfjb6c0wb4/images/stencil/320w/products/111/399/02__65651.1589167373.jpg?c=1", category: "New" },
+  ];
+  
+  // Fetch products by category
+  export const getProductsByCategory = (category) => {
+    return products.filter((product) => product.category === category);
+  };
+  
+  // Search products by query
+  export const searchProducts = (query) => {
+    if (!query) return []; // Return empty array if query is empty
+    return products.filter((product) =>
+      product.title.toLowerCase().includes(query.toLowerCase())
+    );
+  };

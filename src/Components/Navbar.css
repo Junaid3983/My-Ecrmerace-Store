@@ -1,0 +1,444 @@
+/* General Navbar Styles */
+.navbar {
+  width: 100%;
+  background-color: #2a3746;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Top Row: Logo, Search, Whatsapp */
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+/* Logo Styles */
+.logo {
+  position: absolute; /* Position the logo absolutely */
+  top: 0px; /* Add margin from the top */
+  left: 50px; /* Add margin from the left */
+  width: 130px; /* Adjust the size of the logo */
+  height: auto; /* Maintain aspect ratio */
+  
+}
+
+.logo img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.market-text {
+  font-size: 18px;
+  margin-left: 10px;
+  color: #ccc;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 40px;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+  margin-left: 350px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 20px;
+  height: 100%;
+  background-color: #f5a623;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #e09416;
+}
+
+.search-button svg {
+  font-size: 16px;
+}
+
+/* Whatsapp Contact */
+.whatsapp-contact {
+  display: flex;
+  align-items: center;
+  background-color: #f5a623;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.whatsapp-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  color: black;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+
+.contact-number {
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
+}
+
+/* Bottom Row: Categories, Links, Icons */
+.navbar-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+/* Categories Button and Dropdown */
+.categories-container {
+  position: relative;
+}
+
+.categories-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f5a623;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.categories-button:hover {
+  background-color: #e09416;
+}
+
+.menu-icon {
+  font-size: 18px;
+}
+
+.categories-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  min-width: 250px;
+  margin-top: 5px;
+  color: #333;
+}
+
+.categories-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-item {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.category-item:last-child {
+  border-bottom: none;
+}
+
+.category-item a {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.category-item a:hover {
+  background-color: #f5f5f5;
+}
+
+.category-icon {
+  margin-right: 10px;
+  font-size: 12px;
+  color: #666;
+}
+
+.has-submenu {
+  position: relative;
+}
+
+.submenu-indicator {
+  margin-left: auto;
+  font-size: 12px;
+  color: #666;
+}
+
+.more-item a {
+  font-weight: 500;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #f5a623;
+}
+
+/* Dropdown Styles */
+.nav-links .dropdown {
+  position: relative;
+}
+
+.dropdown-icon {
+  font-size: 12px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #2a3746;
+  padding: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 180px;
+  display: none;
+}
+
+.nav-links .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 8px 15px;
+}
+
+.dropdown-menu li a {
+  display: block;
+  white-space: nowrap;
+}
+
+/* Icons */
+.icon-container {
+  display: flex;
+  gap: 20px;
+}
+
+.icon-link {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.icon {
+  font-size: 22px;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #f5a623;
+}
+
+/* Cart Count Badge */
+.cart-icon-container {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #f5a623;
+  color: black;
+  font-size: 12px;
+  font-weight: 600;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* User Dropdown Styles */
+.user-dropdown-container {
+  position: relative;
+}
+
+.user-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  min-width: 220px;
+  margin-top: 10px;
+  padding: 10px 0;
+  color: #333;
+}
+
+.user-dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.user-dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+.user-dropdown-item a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.dropdown-item-icon {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.user-dropdown-divider {
+  height: 1px;
+  background-color: #eaeaea;
+  margin: 8px 0;
+}
+
+.user-dropdown-currency {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.flag-icon {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Divider */
+.navbar-divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .navbar-top {
+    padding: 15px 20px;
+  }
+
+  .search-container {
+    width: 400px;
+  }
+
+  .navbar-bottom {
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-top {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  .navbar-bottom {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px 15px;
+  }
+
+  .categories-button {
+    width: 100%;
+    justify-content: center;
+    order: 1;
+  }
+
+  .categories-dropdown {
+    width: 100%;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .icon-container {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .user-dropdown-menu {
+    right: -50px;
+  }
+}
