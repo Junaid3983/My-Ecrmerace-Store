@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./CardCarousel.css";
+import "./cardCarousel.css";
 
 const cards = [
   {
